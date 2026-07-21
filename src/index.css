@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Noto Sans KR", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Premium neutral palette for refined clarity */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --color-primary-50: #f8ffe5; /* Soft fluorescent lime-yellow tint */
+  --color-primary-100: #f2ffcc;
+  --color-primary-600: #bffe00; /* Pure electric fluorescent neon green */
+  --color-primary-700: #3b7000; /* Deep forest neon olive for contrast */
+  --color-primary-900: #1b3600;
+  
+  --color-accent-emerald: #bffe00;
+
+  /* Redefining emerald palette to highly polished, premium Fluorescent Neon Lime-Green */
+  --color-emerald-50: #f8ffe5;
+  --color-emerald-100: #f2ffcc;
+  --color-emerald-200: #e4ff99;
+  --color-emerald-300: #d0ff66;
+  --color-emerald-400: #b3ff1a;
+  --color-emerald-500: #bffe00; /* Super vibrant electric neon green */
+  --color-emerald-600: #a2eb00; /* Rich neon lime for buttons and active states */
+  --color-emerald-700: #3b7000; /* Deep rich neon olive for high contrast text on light backgrounds */
+  --color-emerald-800: #294f00; /* Even darker rich accent text */
+  --color-emerald-900: #1b3600;
+  --color-emerald-950: #0a1400;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fafafa; /* Sleek extremely clean off-white background */
+  color: #171717; /* Slate dark gray for readable text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Framer-style card classes */
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(229, 231, 235, 0.7);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.02), 0 2px 6px -1px rgba(0, 0, 0, 0.01);
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.01);
+  border-color: rgba(209, 213, 219, 0.9);
+}
+
+.bento-badge {
+  font-family: var(--font-display);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  background-color: #ffffff;
+  color: #171717;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.bento-card-dark {
+  background-color: #121212; /* Rich elegant carbon black */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Custom scrollbar to keep it incredibly neat and professional */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+/* Print Style rules for clean resume generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #171717 !important;
+    font-size: 11pt !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-page-break {
+    page-break-before: always;
+  }
+  
+  .print-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .print-card {
+    border: 1px solid rgba(229, 231, 235, 1) !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    border-radius: 16px !important;
+  }
+  
+  .print-text-dark {
+    color: #000000 !important;
+  }
+}
+
+

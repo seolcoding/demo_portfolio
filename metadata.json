@@ -1,0 +1,6 @@
+{
+  "name": "서달미 포트폴리오",
+  "description": "사용자 조사에서 시작해 기능 우선순위까지 설계하는 서비스 기획자 서달미의 포트폴리오",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
