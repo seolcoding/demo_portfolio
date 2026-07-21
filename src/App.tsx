@@ -205,11 +205,16 @@ export default function App() {
           {/* Profile Card */}
           <div className="bento-card p-6 flex flex-col items-center text-center relative overflow-hidden print-card">
             
-            {/* Elegant Monogram Avatar */}
+            {/* Elegant Profile Image */}
             <div className="relative mb-4 mt-2">
-              <div className="w-20 h-20 rounded-3xl bg-neutral-900 text-white font-display flex items-center justify-center text-2xl font-extrabold shadow-sm relative">
-                SDM
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-lg flex items-center justify-center">
+              <div className="w-24 h-24 rounded-3xl bg-neutral-100 border border-neutral-200/80 overflow-hidden shadow-xs relative flex items-center justify-center">
+                <img 
+                  src="https://raw.githubusercontent.com/seolcoding/demo_portfolio/main/seo-dalmi-profile.png" 
+                  alt="서달미 프로필" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-lg flex items-center justify-center shadow-sm">
                   <Sparkles className="w-3.5 h-3.5 text-neutral-950" />
                 </div>
               </div>
