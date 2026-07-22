@@ -119,7 +119,7 @@ export default function App() {
               onClick={() => setActiveFilter('research')}
               className={`px-4 py-1.5 text-xs font-extrabold transition-all duration-200 flex items-center gap-1.5 cursor-pointer rounded-full ${
                 activeFilter === 'research'
-                  ? 'bg-emerald-500 text-neutral-950 shadow-sm'
+                  ? 'bg-red-600 text-white shadow-sm'
                   : 'bg-neutral-100/70 text-neutral-600 hover:bg-neutral-200/70'
               }`}
             >
@@ -131,7 +131,7 @@ export default function App() {
               onClick={() => setActiveFilter('prioritize')}
               className={`px-4 py-1.5 text-xs font-extrabold transition-all duration-200 flex items-center gap-1.5 cursor-pointer rounded-full ${
                 activeFilter === 'prioritize'
-                  ? 'bg-emerald-500 text-neutral-950 shadow-sm'
+                  ? 'bg-red-600 text-white shadow-sm'
                   : 'bg-neutral-100/70 text-neutral-600 hover:bg-neutral-200/70'
               }`}
             >
@@ -143,7 +143,7 @@ export default function App() {
               onClick={() => setActiveFilter('metrics')}
               className={`px-4 py-1.5 text-xs font-extrabold transition-all duration-200 flex items-center gap-1.5 cursor-pointer rounded-full ${
                 activeFilter === 'metrics'
-                  ? 'bg-emerald-500 text-neutral-950 shadow-sm'
+                  ? 'bg-red-600 text-white shadow-sm'
                   : 'bg-neutral-100/70 text-neutral-600 hover:bg-neutral-200/70'
               }`}
             >
@@ -214,8 +214,8 @@ export default function App() {
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-lg flex items-center justify-center shadow-sm">
-                  <Sparkles className="w-3.5 h-3.5 text-neutral-950" />
+                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-600 rounded-lg flex items-center justify-center shadow-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-white" />
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@ export default function App() {
                     {/* Timeline Node Badge */}
                     <span className={`absolute -left-[25.5px] top-1 w-4.5 h-4.5 rounded-full flex items-center justify-center text-[9px] font-bold border-2 transition-all ${
                       filterHighlight 
-                        ? 'bg-emerald-500 text-neutral-950 border-white ring-2 ring-emerald-100'
+                        ? 'bg-red-600 text-white border-white ring-2 ring-red-100'
                         : isSelected
                           ? 'bg-neutral-900 text-white border-white shadow-sm'
                           : 'bg-white text-neutral-400 border-neutral-200'
