@@ -212,6 +212,13 @@ export default function App() {
                   src="/seo-dalmi-profile.png" 
                   alt="서달미 프로필" 
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.fallback) {
+                      target.dataset.fallback = 'true';
+                      target.src = 'https://raw.githubusercontent.com/seolcoding/demo_portfolio/main/seo-dalmi-profile.png';
+                    }
+                  }}
                 />
                 <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-600 rounded-lg flex items-center justify-center shadow-sm">
                   <Sparkles className="w-3.5 h-3.5 text-white" />
